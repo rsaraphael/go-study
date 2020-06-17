@@ -12,7 +12,7 @@ import (
 type PostgresConnector struct {
 }
 
-func (p *PostgresConnector) GetConnection() (db *gorm.DB, err error) {
+func (*PostgresConnector) GetConnection() (db *gorm.DB, err error) {
 	e := godotenv.Load()
 	if e != nil {
 		fmt.Print(e)
